@@ -329,7 +329,7 @@ int main()
 
 ### 4. bzoj3110 整体二分 + 树状数组区间修改区间查询
 
-链接：https://www.lydsy.com/JudgeOnline/problem.php?id=3110 
+链接：[bzoj3110](https://www.lydsy.com/JudgeOnline/problem.php?id=3110)
 描述：有N个位置，M个操作。操作有两种，每次操作如果是1 a b c的形式表示在第a个位置到第b个位置，每个位置加入一个数c；如果是2 a b c形式，表示询问从第a个位置到第b个位置，第C大的数是多少。 
 N,M<=50000,a<=b<=N,1操作中abs(c)<=N,2操作中c<=Maxlongint 
 题解：对答案进行二分， 对于1操作，将c>mid的放入右区间递归，c<=mid的放入左区间； 对于2操作，若查询[mid+1,r]的数的个数>=c的，放入右区间，否则放入左区间。 
